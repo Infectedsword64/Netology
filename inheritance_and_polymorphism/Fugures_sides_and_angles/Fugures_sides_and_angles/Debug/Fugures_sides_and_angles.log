@@ -1,0 +1,3 @@
+﻿  Fugures_sides_and_angles.cpp
+C:\Users\semen karpov\Desktop\Things\С++\Netology\inheritance_and_polymorphism\Fugures_sides_and_angles\Fugures_sides_and_angles\Fugures_sides_and_angles.cpp(30,84): error C2065: M_PI: необъявленный идентификатор
+C:\Users\semen karpov\Desktop\Things\С++\Netology\inheritance_and_polymorphism\Fugures_sides_and_angles\Fugures_sides_and_angles\Fugures_sides_and_angles.cpp(30,19): error C2661: Triangle::Triangle: нет перегруженной функции, принимающей 5 аргументов
