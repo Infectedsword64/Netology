@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/semen karpov/Desktop/Things/С++/Race_som/base-CPP/race_diplom/RaceSimulator/RaceSimulation
+# Install script for directory: C:/Users/semen karpov/Desktop/Things/С++/Netology/Race_simulator/RaceSimulation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/semen karpov/Desktop/Things/С++/Race_som/base-CPP/race_diplom/RaceSimulator/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/semen karpov/Desktop/Things/С++/Netology/Race_simulator/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

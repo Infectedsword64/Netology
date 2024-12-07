@@ -8,6 +8,6 @@ class RACESIMULATION_API Camel: public GroundVehicle
         Camel();
 
     protected:
-        virtual double getRestTimeHr(const int distanceKm) const override;
+        double getRestTimeHr(const int distanceKm) const override;
     private:
 };
