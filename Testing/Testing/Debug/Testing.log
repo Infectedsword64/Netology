@@ -1,0 +1,18 @@
+﻿  Testing.cpp
+C:\Users\semen karpov\Desktop\Things\С++\Netology\Testing\Testing\extended_array.h(84,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\semen karpov\Desktop\Things\С++\Netology\Testing\Testing\extended_array.h(81): message : во время компиляции функции-члена класс шаблон "std::pair<T,int> ExtArray<T>::mode(void)"
+          with
+          [
+              T=int
+          ]
+C:\Users\semen karpov\Desktop\Things\С++\Netology\Testing\Testing\Testing.cpp(20): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<T,int> ExtArray<T>::mode(void)"
+          with
+          [
+              T=int
+          ]
+C:\Users\semen karpov\Desktop\Things\С++\Netology\Testing\Testing\Testing.cpp(7): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "ExtArray<int>"
+C:\Users\semen karpov\Desktop\Things\С++\Netology\Testing\Testing\extended_array.h(92,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\semen karpov\Desktop\Things\С++\Netology\Testing\Testing\extended_array.h(53,38): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\semen karpov\Desktop\Things\С++\Netology\Testing\Testing\extended_array.h(49): message : во время компиляции функции-члена класс шаблон "double ExtArray<int>::mean(int,int)"
+C:\Users\semen karpov\Desktop\Things\С++\Netology\Testing\Testing\Testing.cpp(8): message : выполняется компиляция ссылки на экземпляр шаблон функции "double ExtArray<int>::mean(int,int)"
+  Testing.vcxproj -> C:\Users\semen karpov\Desktop\Things\С++\Netology\Testing\Debug\Testing.exe
