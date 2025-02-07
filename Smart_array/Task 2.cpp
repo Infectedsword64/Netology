@@ -18,6 +18,11 @@ public:
 		}
 	}
 	
+	smart_array() {
+       this->actual_size = 0;
+       this->data = new int[0];
+    }
+	
     ~smart_array() {
         delete[] data;
     }
@@ -60,8 +65,7 @@ public:
         }
         return false;
     }
-
-protected:
+private:
     int* data;
     int logical_size = 0;
     int actual_size = 0;
@@ -76,7 +80,6 @@ int main() {
     smart_array new_array(2);
     new_array.add_element(44); 
     new_array.add_element(34);
-
     arr = new_array;
     return 0;
 }

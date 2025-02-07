@@ -8,7 +8,11 @@ public:
        this->data = new int[size];
     }
     ~smart_array() {
-        delete[] data;
+       delete[] data;
+    }
+	smart_array() {
+       this->actual_size = 0;
+       this->data = new int[0];
     }
     void add_element(int el) {
         if (logical_size < actual_size) {
