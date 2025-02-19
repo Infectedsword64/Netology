@@ -3,20 +3,18 @@
 class smart_array {
 public:
     smart_array(int size) {
-       this->logical_size = size;
+       this->logical_size = 0;
        this->actual_size = size;
        this->data = new int[size];
     }
     ~smart_array() {
        delete[] data;
     }
-	smart_array() {
-       this->actual_size = 0;
-       this->data = new int[0];
-    }
+
     void add_element(int el) {
         if (logical_size < actual_size) {
             data[logical_size] = el;
+            logical_size++;
         }
         else {
             data = allocate_new_memory(this->data);
