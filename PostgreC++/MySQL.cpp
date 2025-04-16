@@ -137,7 +137,7 @@ void MySQL::deleteClient(std::string table, int id)
     std::cout << "Client deleted successfully" << std::endl;
 }
 
-void MySQL::findClient(std::string table, std::string first_name, std::string last_name, std::string email, std::string phone_number)
+int MySQL::findClient(std::string table, std::string first_name, std::string last_name, std::string email, std::string phone_number)
 {
     pqxx::work tx(*c);
     std::string findClient = "SELECT * FROM " + tx.esc(table) + " WHERE first_name = '" +
@@ -147,17 +147,51 @@ void MySQL::findClient(std::string table, std::string first_name, std::string la
     if (R.empty() == 1)
     {
         std::cout << "Client wasn't found" << std::endl;
+        tx.commit();
+        return -1;
     }
     else
     {
+        int clientId = -1;
         for (const auto &el : R)
         {
-            std::cout << "id: " << el.at(0).as<int>() << std::endl;
+            clientId = el.at(0).as<int>();
+            std::cout << "id: " << clientId << std::endl;
             std::cout << "first_name: " << el.at(1).as<std::string>() << std::endl;
             std::cout << "last_name: " << el.at(2).as<std::string>() << std::endl;
             std::cout << "email: " << el.at(3).as<std::string>() << std::endl;
             std::cout << "phone_number: " << el.at(4).as<std::string>() << std::endl;
         }
+        tx.commit();
+        return clientId;
     }
-    tx.commit();
+}int MySQL::findClient(std::string table, std::string first_name, std::string last_name, std::string email, std::string phone_number)
+{
+    pqxx::work tx(*c);
+    std::string findClient = "SELECT * FROM " + tx.esc(table) + " WHERE first_name = '" +
+                             tx.esc(first_name) + "' AND last_name = '" + tx.esc(last_name) + "' AND email = '" +
+                             tx.esc(email) + "' AND phone_number = '" + tx.esc(phone_number) + "'";
+    pqxx::result R(tx.exec(findClient));
+    if (R.empty() == 1)
+    {
+        std::cout << "Client wasn't found" << std::endl;
+        tx.commit();
+        return -1;
+    }
+    else
+    {
+        int clientId = -1;
+        for (const auto &el : R)
+        {
+            clientId = el.at(0).as<int>();
+            std::cout << "id: " << clientId << std::endl;
+            std::cout << "first_name: " << el.at(1).as<std::string>() << std::endl;
+            std::cout << "last_name: " << el.at(2).as<std::string>() << std::endl;
+            std::cout << "email: " << el.at(3).as<std::string>() << std::endl;
+            std::cout << "phone_number: " << el.at(4).as<std::string>() << std::endl;
+        }
+        tx.commit();
+        return clientId;
+    }
+}
 }
