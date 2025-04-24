@@ -23,7 +23,7 @@ public:
     // Метод, позволяющий удалить существующего клиента
     void deleteClient(std::string table, int id);
     // Метод, позволяющий найти клиента по его данным (имени, фамилии, email-у или телефону)
-    void findClient(std::string table, std::string first_name, std::string last_name, std::string email, std::string phone_number);
+    int findClient(std::string table, std::string first_name, std::string last_name, std::string email, std::string phone_number);
 
 private:
     std::string host;

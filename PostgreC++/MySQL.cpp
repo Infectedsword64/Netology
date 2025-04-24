@@ -8,19 +8,12 @@ MySQL::MySQL(std::string host_, std::string port_, std::string dbname_,
     dbname = dbname_;
     user = user_;
     password = password_;
-    try
-    {
-        c = std::make_unique<pqxx::connection>("host=" + host + " " +
-                                               "port=" + port + " " +
-                                               "dbname=" + dbname + " " +
-                                               "user=" + user + " " +
-                                               "password=" + password + " ");
-        std::cout << "Connection is ready\n";
-    }
-    catch (std::exception &ex)
-    {
-        std::cout << "Error: " << ex.what() << std::endl;
-    }
+    c = std::make_unique<pqxx::connection>("host=" + host + " " +
+                                           "port=" + port + " " +
+                                           "dbname=" + dbname + " " +
+                                           "user=" + user + " " +
+                                           "password=" + password + " ");
+    std::cout << "Connection is ready\n";
 }
 
 MySQL::~MySQL()
