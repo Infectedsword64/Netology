@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\semen karpov\\Desktop\\Things\\\u0421\u002B\u002B\\Netology\\Race_condition\\Protected_data_exchange\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD5A6116-40A6-45FF-9A98-794CD5F56FDC}|Protected_data_exchange\\Protected_data_exchange.vcxproj|C:\\Users\\semen karpov\\Desktop\\Things\\\u0421\u002B\u002B\\Netology\\Race_condition\\Protected_data_exchange\\Protected_data_exchange\\Protected_data_exchange.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CD5A6116-40A6-45FF-9A98-794CD5F56FDC}|Protected_data_exchange\\Protected_data_exchange.vcxproj|solutionrelative:Protected_data_exchange\\Protected_data_exchange.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Protected_data_exchange.cpp",
+              "DocumentMoniker": "C:\\Users\\semen karpov\\Desktop\\Things\\\u0421\u002B\u002B\\Netology\\Race_condition\\Protected_data_exchange\\Protected_data_exchange\\Protected_data_exchange.cpp",
+              "RelativeDocumentMoniker": "Protected_data_exchange\\Protected_data_exchange.cpp",
+              "ToolTip": "C:\\Users\\semen karpov\\Desktop\\Things\\\u0421\u002B\u002B\\Netology\\Race_condition\\Protected_data_exchange\\Protected_data_exchange\\Protected_data_exchange.cpp",
+              "RelativeToolTip": "Protected_data_exchange\\Protected_data_exchange.cpp",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-14T14:07:07.529Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

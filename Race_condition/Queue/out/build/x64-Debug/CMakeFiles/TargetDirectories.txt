@@ -1,0 +1,3 @@
+C:/Users/semen karpov/Desktop/Things/С++/Netology/Race_condition/Queue/out/build/x64-Debug/CMakeFiles/Multithread.dir
+C:/Users/semen karpov/Desktop/Things/С++/Netology/Race_condition/Queue/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/semen karpov/Desktop/Things/С++/Netology/Race_condition/Queue/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
