@@ -4,7 +4,6 @@
 #include <stdexcept>
 #include <memory>
 
-// Типы сообщений
 enum class Type {
     WARNING,
     ERROR,
@@ -12,7 +11,6 @@ enum class Type {
     UNKNOWN
 };
 
-// Класс сообщения для логирования
 class LogMessage {
 private:
     Type m_type;
@@ -26,7 +24,6 @@ public:
     const std::string& message() const { return m_message; }
 };
 
-// Базовый класс обработчика
 class Handler {
 protected:
     std::unique_ptr<Handler> nextHandler;
@@ -45,7 +42,6 @@ public:
     }
 };
 
-// Обработчик фатальных ошибок
 class FatalErrorHandler : public Handler {
 public:
     void handle(const LogMessage& message) override {
@@ -58,7 +54,6 @@ public:
     }
 };
 
-// Обработчик обычных ошибок
 class ErrorHandler : public Handler {
 private:
     std::string filePath;
@@ -79,7 +74,6 @@ public:
     }
 };
 
-// Обработчик предупреждений
 class WarningHandler : public Handler {
 public:
     void handle(const LogMessage& message) override {
@@ -92,7 +86,6 @@ public:
     }
 };
 
-// Обработчик неизвестных сообщений
 class UnknownHandler : public Handler {
 public:
     void handle(const LogMessage& message) override {
@@ -105,14 +98,12 @@ public:
     }
 };
 
-// Функция для создания цепочки обработчиков
 std::unique_ptr<Handler> createChain() {
     auto fatalHandler = std::make_unique<FatalErrorHandler>();
     auto errorHandler = std::make_unique<ErrorHandler>("errors.log");
     auto warningHandler = std::make_unique<WarningHandler>();
     auto unknownHandler = std::make_unique<UnknownHandler>();
 
-    // Строим цепочку в порядке приоритета
     errorHandler->setNext(std::move(warningHandler));
     warningHandler->setNext(std::move(unknownHandler));
     fatalHandler->setNext(std::move(errorHandler));
@@ -120,16 +111,13 @@ std::unique_ptr<Handler> createChain() {
     return fatalHandler;
 }
 
-// Пример использования
 int main() {
     auto chain = createChain();
 
     try {
-        // Тестируем обработку разных типов сообщений
         chain->handle(LogMessage(Type::WARNING, "Low disk space"));
         chain->handle(LogMessage(Type::ERROR, "File not found"));
         chain->handle(LogMessage(Type::FATAL_ERROR, "System crash"));
-        // chain->handle(LogMessage(Type::UNKNOWN, "Unexpected message"));
     }
     catch (const std::exception& e) {
         std::cerr << "Exception caught: " << e.what() << std::endl;

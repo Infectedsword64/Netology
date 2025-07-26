@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\semen karpov\\Desktop\\Things\\\u0421\u002B\u002B\\Netology\\SOLID\\task2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4E7AF-5993-46AF-A0E2-2F25472FE1F3}|task2\\task2.vcxproj|C:\\Users\\semen karpov\\Desktop\\Things\\\u0421\u002B\u002B\\Netology\\SOLID\\task2\\task2\\task2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ECC4E7AF-5993-46AF-A0E2-2F25472FE1F3}|task2\\task2.vcxproj|solutionrelative:task2\\task2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "task2.cpp",
+              "DocumentMoniker": "C:\\Users\\semen karpov\\Desktop\\Things\\\u0421\u002B\u002B\\Netology\\SOLID\\task2\\task2\\task2.cpp",
+              "RelativeDocumentMoniker": "task2\\task2.cpp",
+              "ToolTip": "C:\\Users\\semen karpov\\Desktop\\Things\\\u0421\u002B\u002B\\Netology\\SOLID\\task2\\task2\\task2.cpp",
+              "RelativeToolTip": "task2\\task2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-26T14:00:43.274Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
