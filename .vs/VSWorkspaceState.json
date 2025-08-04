@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Best_Crauler",
+    "\\Best_Crauler\\Best_Crauler",
+    "\\Best_Crauler\\Best_Crauler\\src"
   ],
-  "SelectedNode": "\\Testing.sln",
+  "SelectedNode": "\\Best_Crauler\\Best_Crauler.sln",
   "PreviewInSolutionExplorer": false
 }

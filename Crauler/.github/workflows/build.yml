@@ -1,0 +1,90 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: search_engine
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential cmake libboost-all-dev libpqxx-dev postgresql-client
+    
+    - name: Create build directory
+      run: mkdir build
+    
+    - name: Configure CMake
+      run: |
+        cd build
+        cmake ..
+    
+    - name: Build
+      run: |
+        cd build
+        make -j$(nproc)
+    
+    - name: Test build artifacts
+      run: |
+        cd build
+        ls -la
+        file spider search_engine || echo "Executables not found"
+
+  build-windows:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install vcpkg
+      run: |
+        git clone https://github.com/Microsoft/vcpkg.git C:\vcpkg
+        C:\vcpkg\bootstrap-vcpkg.bat
+    
+    - name: Install dependencies
+      run: |
+        C:\vcpkg\vcpkg install boost-system:x64-windows
+        C:\vcpkg\vcpkg install boost-locale:x64-windows
+        C:\vcpkg\vcpkg install boost-thread:x64-windows
+        C:\vcpkg\vcpkg install libpqxx:x64-windows
+    
+    - name: Create build directory
+      run: mkdir build
+    
+    - name: Configure CMake
+      run: |
+        cd build
+        cmake .. -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
+    
+    - name: Build
+      run: |
+        cd build
+        cmake --build . --config Release
+    
+    - name: Test build artifacts
+      run: |
+        cd build
+        dir
+        if exist spider.exe echo "Spider executable found"
+        if exist search_engine.exe echo "Search engine executable found" 
